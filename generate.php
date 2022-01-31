@@ -31,13 +31,19 @@
 				$new = uniqid('key',TRUE);
 				
 				// get download link and file size
-				$download_link = "http://" . $_SERVER['HTTP_HOST'] . DOWNLOAD_PATH . "?key=" . $new . "&i=" . $key; 
+				$download_link = "https://" . $_SERVER['HTTP_HOST'] . DOWNLOAD_PATH . "?key=" . $new . "&i=" . $key; 
 				$filesize = (isset($download['file_size'])) ? $download['file_size'] : human_filesize(filesize($download['protected_path']), 2);
+				$protected_file = $download['protected_path'];
+				$suggested_name = $download['suggested_name'];
+				$remote_file = $download['remote_path'];
+				$protected_or_remote_file = (isset($protected_file)) ? $protected_file : $remote_file;
 
 				// Add to the download list
 				$download_list[] = array(
 					'download_link' => $download_link,
-					'filesize' => $filesize
+					'filesize' => $filesize,
+					'protected_or_remote_file' => $protected_or_remote_file,
+					'suggested_name' => $suggested_name
 				);
 
 				/*
@@ -68,6 +74,8 @@
 	    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 	    <link href="bootstrap/css/docs.css" rel="stylesheet">
 	    <link href="bootstrap/google-code-prettify/prettify.css" rel="stylesheet">
+	    <link href="custom.css" rel="stylesheet">
+
 		<style>
 			body {
 	    		padding-top: 25px;
@@ -76,17 +84,23 @@
 	</head>
 	<body>
 		 <div class="container">
+		 <div class="hero-unit">
 			<h1>Download key created</h1>
 			<h6>Your new single-use download links:<h6><br>
+				<h4>Caution: clicking a valid download link will set the link status to expired and will prompt you to open or save the file.</h4><br>
+				<p>To copy a link, RIGHT-click it and select "Copy link address" (or "Copy Link" if using Firefox).</p>
 			<?php foreach ($download_list as $download) { ?>			
-			<h4>
+			<h4><br>
 				<a href="<?php echo $download['download_link'] ?>"><?php echo $download['download_link'] ?></a><br>
-				Size: <?php echo $download['filesize'] ?>
+				Protected file name: <?php echo $download['protected_or_remote_file'] ?><br>
+				Suggested file name: <?php echo $download['suggested_name'] ?><br>
+				Size: <?php echo $download['filesize'] ?><br>
 			</h4>
-			<? } ?>
-			
+			<?php } ?>
+
 			<br><br>
-			<a href="/singleuse">Back to the demo</a>
+			<a href="/single-use/index.php"><button>Back to the demo</button></a>
+			</div>
 		</div>
 	</body>
 </html>
