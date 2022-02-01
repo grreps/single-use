@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <?php
-    	include("variables.php");
+ /**
+ *	This page creates the single use download link(s)
+ *	The page is password-protected with the ADMIN_PASSWORD defined in variables.php
+ *   (using page protection code from https://gist.github.com/eric1234/4692807)
+ */
+  include("variables.php");
+	require_once 'protect.php';
+	Protect\with('admin-login.php', ADMIN_PASSWORD, 'dummy_arg_for_multipage_protection');
 ?>
 <html lang="en">
   <head>
@@ -37,14 +44,10 @@
     <link href="bootstrap/css/docs.css" rel="stylesheet">
     <link href="bootstrap/google-code-prettify/prettify.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
-    <style type="text/css">
-    	body {
-    		padding-top: 25px;
-    	}
-    </style>
+  
   </head>
 
-  <body>
+  <body id="bootstrap-overrides">
     <div class="container">
 		<!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
@@ -72,7 +75,10 @@
         <p>Click to generate new download links for local and/or remote files declared in variables.php.</p>
       	<p>Currently, variables.php declares two demo local files in ./secret folder plus an example dropbox folder.</p>
         <p>Generating new links does not affect any previously-generated unexpired links.</p>
-        <p><a href="/single-use/generate.php?<?php echo ADMIN_PASSWORD; ?>"><button>Generate download links</button></a></p>
+        <p">
+        <a href="/single-use/view.php?<?php echo ADMIN_PASSWORD; ?>"><button>📜 View existing links</button></a>
+        <a href="/single-use/generate.php?<?php echo ADMIN_PASSWORD; ?>"><button>⚡ Generate new links</button></a>
+        </p>
         <br>
         <p>To maximize security of secret files:
           <ul>
@@ -84,7 +90,7 @@
         </p>
 		</div>
 	</div>
-	
+
     <footer class="footer">
       <div class="container">
 

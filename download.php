@@ -24,9 +24,11 @@
 	 *	When the match is found, remove it
 	 */
 	foreach($keys as &$one) {
-		if(rtrim($one)==$key) {
-			$match = true;
-			$one = '';
+		$one_as_array = explode(",",$one);
+		$array_item_1 = $one_as_array[0];
+		if(rtrim($array_item_1)==$key) {
+						$match = true;
+						$one = '';
 		}
 	}
 	
@@ -87,9 +89,15 @@
 <html>
 	<head>
 		<title>Download expired</title>
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="custom.css" rel="stylesheet">
 	</head>
-	<body>
-		<h1>Download expired</h1>
+	<body id="bootstrap-overrides">
+	<div class="container">
+		<div class="hero-unit">
+			<h1>Download link expired</h1>
+		</div>
+	</div>
 	</body>
 </html>
 
