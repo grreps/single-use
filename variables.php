@@ -28,7 +28,7 @@
 		array(
 			'content_type' => 'audio/mpeg', 
 			'suggested_name' => 'music.mp3', 
-			'remote_path' => 'https://www.dropbox.com/XXXXXXX/music.mp3?dl=1', // remove file
+			'remote_path' => 'https://www.dropbox.com/XXXXXXX/music.mp3?dl=1', // remote file
 			'file_size' => '7.1MB' // File size is manually set, getting a remote file size is impossible
 		)
 	);
