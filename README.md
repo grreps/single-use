@@ -49,16 +49,18 @@ You will need to modify the `variables.php` file and set your file specific info
 	);
 
 	// The path to the download.php file (probably same dir as this file)
- 	define('DOWNLOAD_PATH','/singleuse/download.php');
+ 	define('DOWNLOAD_PATH','/single-use/download.php');
 	
-	// The admin password to generate a new download link
+	// The admin password to generate new download links or view existing links
 	define('ADMIN_PASSWORD','1234');
 	
 	// The expiration date of the link (examples: +1 year, +5 days, +13 hours)
 	define('EXPIRATION_DATE', '+1 month');
 
-Once this is in place, you are ready to generate a new download key. To do this, you will need to use the password you set in the variables file. In the example above, that is `1234`
+Once this is in place, you are ready to generate new download links. To do this, you will need to log in using the password you set in the variables file. In the example above, that is `1234`.
 
-Navigate to `example.com/singleuse/generate.php?1234` (Notice the `?1234` a the end — that is your password)
+Navigate to `example.com/single-use/index.php` and enter the admin password at the login prompt.
 
-Copy the link that is generated and send it off. Voila! Done.
+Click the  `Generate new links` button.
+
+Copy the links that are generated and send them off. Voila! Done.
