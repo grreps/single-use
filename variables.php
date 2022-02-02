@@ -38,7 +38,7 @@
 	
 	// The admin password to generate a new download link and view existing links
 	// Be sure to change it to your own unique hard-to-guess password
-	define('ADMIN_PASSWORD','3downloadlinks');
+	define('ADMIN_PASSWORD','1234');
 	
 	// The expiration date of the link (examples: +1 year, +5 days, +13 hours)
 	define('EXPIRATION_DATE', '+1 month');

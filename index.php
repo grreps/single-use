@@ -75,7 +75,7 @@
         <p>Click to generate new download links for local and/or remote files declared in variables.php.</p>
       	<p>Currently, variables.php declares two demo local files in ./secret folder plus an example dropbox folder.</p>
         <p>Generating new links does not affect any previously-generated unexpired links.</p>
-        <p">
+        <p>
         <a href="/single-use/view.php?<?php echo ADMIN_PASSWORD; ?>"><button>📜 View existing links</button></a>
         <a href="/single-use/generate.php?<?php echo ADMIN_PASSWORD; ?>"><button>⚡ Generate new links</button></a>
         </p>

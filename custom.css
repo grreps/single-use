@@ -3,11 +3,12 @@
 */
 #bootstrap-overrides {
 /*
-  Moved here from inline style
+  Horizontal white space at top of page
 */
-  padding-top: 25px !important;
+  padding-top: 25px;
 }
 
+/* Button for page nav and login form */
 #bootstrap-overrides button {
   font-size: 20px;
   padding: 12px 15px;
@@ -18,12 +19,23 @@
   background-color: #f5f5f5;
   box-shadow: 2px 3px 7px 1px rgba(0,0,0,0.8);
 }
-
 #bootstrap-overrides button:hover {
   background-color: #fff;
 }
 
+/* Admin login form */
 #bootstrap-overrides input {
   height: 25px;
   margin: 12px;
+}
+#bootstrap-overrides form button {
+  margin-top: 0;
+  padding: 9px 15px;
+}
+#bootstrap-overrides form { 
+  font-size: 17px; /* 'Invalid password' message */
+  font-weight: 800;
+}
+#bootstrap-overrides form p {
+  font-size: 20px; /* 'Enter password...' prompt */
 }
