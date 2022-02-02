@@ -95,7 +95,7 @@
       <div class="container">
 
 		    <p>
-         Project forked from original project by Josh Pangell <a href="http://joshpangell.com">http://joshpangell.com</a><br>
+         Made by Josh Pangell <a href="http://joshpangell.com">http://joshpangell.com</a><br>
          This demo page was built using <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter bootstrap</a>
         </p>
       </div>
