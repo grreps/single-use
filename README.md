@@ -17,6 +17,17 @@ You can also mask the name of the file being downloaded, for further protection.
 
 ## Update
 
+On Feb 1, 2022
+- added new file view.php to display all unexpired download links
+- removed URL password parameter required for generate.php and replaced with admin-login form (new files admin-login.php and protect.php) to grant access to index.php, generate.php and view.php (expects same ADMIN_PASSWORD defined in variable.php)
+- moved inline styles from php pages to custom.css
+
+On Jan 31, 2022
+- added new file custom.css
+- replaced page navigation links with buttons in index.php and generate.php 
+- added line spacing in generate.php to delineate multiple download links' file info
+- replaced typo "<?" with "<?php" to fix page style issue in generate.php
+
 On Feb 28, 2018 a feature was added to allow remote files to be downloaded, in addition to local files
 
 On July 11, 2016 a multi-file feature branch was merged with the single file. It is now possible to download multiple files at once. 
