@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
  /**
  *	This page creates the single use download link(s)
@@ -9,6 +8,7 @@
 	require_once 'protect.php';
 	Protect\with('admin-login.php', ADMIN_PASSWORD, 'dummy_arg_for_multipage_protection');
 ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -76,8 +76,8 @@
       	<p>Currently, variables.php declares two demo local files in ./secret folder plus an example dropbox folder.</p>
         <p>Generating new links does not affect any previously-generated unexpired links.</p>
         <p>
-        <a href="/single-use/view.php?<?php echo ADMIN_PASSWORD; ?>"><button>📜 View existing links</button></a>
-        <a href="/single-use/generate.php?<?php echo ADMIN_PASSWORD; ?>"><button>⚡ Generate new links</button></a>
+        <a href="/single-use/view.php"><button>📜 View existing links</button></a>
+        <a href="/single-use/generate.php"><button>⚡ Generate new links</button></a>
         </p>
         <br>
         <p>To maximize security of secret files:
