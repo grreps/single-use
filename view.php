@@ -62,8 +62,8 @@
 				<br>
 				<?php
 					if ($keys_list[0]==""){
-						?><p>No valid download links exist.</p>
-						<p>Any previously-generated links have now all been used or revoked.</p>
+						?><p>The download links list is now empty.</p>
+						<p>Any previously-generated links have either expired, been used or revoked.</p>
 						<a href="/single-use/index.php"><button>⬅ Back to the demo</button></a>
 					<?php
 					}
@@ -92,6 +92,7 @@
 					}?>
 				<a href="/single-use/generate.php"><button>⚡ Generate new links</button></a>
 				<br>
+				<a href="/single-use/revoke-all.php"><button>X Revoke all links</button></a>
 		  </div>
 		</div>
 	</body>

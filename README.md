@@ -17,6 +17,11 @@ You can also mask the name of the file being downloaded, for further protection.
 
 ## Update
 
+On Apr 8, 2022
+- added new file revoke-all.php to allow user to revoke all download links at once
+- added new file .htaccess to prevent access to the keys file via the browser
+- replaced hardcoded file path 'keys/keys' in download.php with new variable KEYS_FILE_PATH set in variables.php
+
 On Feb 1, 2022
 - added new file view.php to display all unexpired download links
 - removed URL password parameter required for generate.php and replaced with admin-login form (new files admin-login.php and protect.php) to grant access to index.php, generate.php and view.php (expects same ADMIN_PASSWORD defined in variable.php)

@@ -42,6 +42,10 @@
 	
 	// The expiration date of the link (examples: +1 year, +5 days, +13 hours)
 	define('EXPIRATION_DATE', '+1 month');
+
+	// The path to the keys file, which contains metadata of unexpired download links
+	//define('KEYS_FILE_PATH', getcwd() . '/keys/keys');
+	define('KEYS_FILE_PATH', 'keys/keys');
 	
 	// Don't worry about this
 	header("Cache-Control: no-cache, must-revalidate");

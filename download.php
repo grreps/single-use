@@ -16,7 +16,7 @@
 	/*
 	 *	Retrive the keys
 	 */
-	$keys = file('keys/keys');
+	$keys = file(KEYS_FILE_PATH);
 	$match = false;
 	
 	/*
@@ -35,7 +35,7 @@
 	/*
 	 *	Puts the remaining keys back into the file
 	 */
-	file_put_contents('keys/keys',$keys);
+	file_put_contents(KEYS_FILE_PATH,$keys);
 	
 	/*
 	 * If we found a match
